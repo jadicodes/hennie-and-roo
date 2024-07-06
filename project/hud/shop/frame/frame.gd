@@ -2,8 +2,9 @@ class_name Frame
 extends TextureButton
 
 
-func set_image(image: CompressedTexture2D) -> void:
-	%ObjectImage.texture = image
+func set_image(image: String) -> void:
+	var tex = load(image)
+	%ObjectImage.texture = tex
 
 
 func set_price(price: int) -> void:

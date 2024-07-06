@@ -1,10 +1,15 @@
 extends Control
 
-var _chicken_price_dictionary =  {
-	"Sussex": 50,
-	"Barred Rock": 90,
-	"Campine": 300,
-	}
+var _chicken_images: Array[String] =  [
+	"res://chickens/campine.png",
+	]
+
+var _chicken_prices : Array[int] = [
+	30
+]
+
+@export var _frames : Array[Frame] = [
+	]
 
 var _shop_open: bool = false
 var _tiny_shop_open: bool = false
@@ -45,5 +50,6 @@ func _on_decoration_button_pressed():
 
 
 func _set_chicken_shop():
-	for frame in %FrameBackground.get_children():
-		if frame is 
+	for i in _chicken_prices.size():
+		_frames[i].set_image(_chicken_images[i])
+		_frames[i].set_price(_chicken_prices[i])
