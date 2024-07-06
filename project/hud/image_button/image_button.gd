@@ -1,7 +1,6 @@
 class_name ImageButton
 extends TextureButton
 
-
 @export var image : CompressedTexture2D
 
 
@@ -16,3 +15,7 @@ func _on_button_down():
 
 func _on_button_up():
 	%Image.position.y -= 2
+
+
+func _on_pressed():
+	%PressedSound.play()

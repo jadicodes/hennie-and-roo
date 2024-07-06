@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://53235pf8rm81"]
 
-[ext_resource type="Texture2D" uid="uid://dnq7xkem3np8o" path="res://grass.png" id="1_lruoc"]
-[ext_resource type="Texture2D" uid="uid://c1o2ykgpo365e" path="res://floor.png" id="2_s71p4"]
+[ext_resource type="Texture2D" uid="uid://dnq7xkem3np8o" path="res://field/grass.png" id="1_lruoc"]
+[ext_resource type="Texture2D" uid="uid://c1o2ykgpo365e" path="res://field/floor.png" id="2_s71p4"]
 [ext_resource type="PackedScene" uid="uid://de4ucf6pwx7ws" path="res://hud/HUD.tscn" id="3_w4n28"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nkqh2"]

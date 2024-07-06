@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://f7kb8pxu0gtt"]
+
+[ext_resource type="Texture2D" uid="uid://bu23pu40px7hn" path="res://hud/shop/frame/object_shop_frame.png" id="1_w7vvm"]
+[ext_resource type="Texture2D" uid="uid://b2qtwuxy4tsi1" path="res://hud/shop/object_shop_frame_pressed.png" id="2_6x4tg"]
+[ext_resource type="Script" path="res://hud/shop/frame/frame.gd" id="3_nlt3h"]
+[ext_resource type="Texture2D" uid="uid://c45dh1o7vh0j" path="res://chickens/campine.png" id="4_38h07"]
+
+[node name="Frame" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -578.0
+offset_bottom = -288.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_w7vvm")
+texture_pressed = ExtResource("2_6x4tg")
+script = ExtResource("3_nlt3h")
+
+[node name="ObjectImage" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 51.0
+offset_bottom = 49.0
+texture = ExtResource("4_38h07")
+
+[node name="PriceLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 4.0
+offset_top = 50.0
+offset_right = 58.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.611765, 0.203922, 0.101961, 1)
+theme_override_font_sizes/font_size = 16
+text = "$100"
+horizontal_alignment = 1

@@ -1,13 +1,10 @@
 extends Control
 
 
-var _shop_open : bool = false
-
-
 func _on_shop_button_pressed():
-	if _shop_open:
+	if %Shop.get_shop_open():
 		%Shop.hide()
-		_shop_open = false
+		%Shop.set_shop_open(false)
 	else:
 		%Shop.show()
-		_shop_open = true
+		%Shop.set_shop_open(true)

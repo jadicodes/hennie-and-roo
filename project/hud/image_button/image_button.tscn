@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbrv8vfp6581n"]
+[gd_scene load_steps=6 format=3 uid="uid://dbrv8vfp6581n"]
 
 [ext_resource type="Texture2D" uid="uid://bmquvga4cvgdf" path="res://hud/button.png" id="1_tlqhf"]
 [ext_resource type="Texture2D" uid="uid://bt5cdol26a12j" path="res://hud/button_pressed.png" id="2_mxii1"]
 [ext_resource type="Script" path="res://hud/image_button/image_button.gd" id="3_xus0t"]
-[ext_resource type="Texture2D" uid="uid://dro320tko4wsg" path="res://hud/chicken_button.png" id="4_icbli"]
+[ext_resource type="Texture2D" uid="uid://dro320tko4wsg" path="res://hud/shop/chicken_button.png" id="4_0piun"]
+[ext_resource type="AudioStream" uid="uid://b8btlmke4bs21" path="res://hud/image_button/pressed.wav" id="5_pe35e"]
 
 [node name="ImageButton" type="TextureButton"]
 anchors_preset = 15
@@ -24,7 +25,12 @@ offset_left = 10.0
 offset_top = 11.0
 offset_right = 38.0
 offset_bottom = 34.0
-texture = ExtResource("4_icbli")
+texture = ExtResource("4_0piun")
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_pe35e")
 
 [connection signal="button_down" from="." to="." method="_on_button_down"]
 [connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

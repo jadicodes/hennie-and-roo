@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjy1jalhcrx3l"]
+
+[ext_resource type="AudioStream" uid="uid://b44rrtejun56f" path="res://jukebox/good_town.wav" id="1_ug44n"]
+
+[node name="Jukebox" type="AudioStreamPlayer"]
+stream = ExtResource("1_ug44n")
+volume_db = -10.0
