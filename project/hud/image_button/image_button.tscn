@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbrv8vfp6581n"]
+
+[ext_resource type="Texture2D" uid="uid://bmquvga4cvgdf" path="res://hud/button.png" id="1_tlqhf"]
+[ext_resource type="Texture2D" uid="uid://bt5cdol26a12j" path="res://hud/button_pressed.png" id="2_mxii1"]
+[ext_resource type="Script" path="res://hud/image_button/image_button.gd" id="3_xus0t"]
+[ext_resource type="Texture2D" uid="uid://dro320tko4wsg" path="res://hud/chicken_button.png" id="4_icbli"]
+
+[node name="ImageButton" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -592.0
+offset_bottom = -312.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_tlqhf")
+texture_pressed = ExtResource("2_mxii1")
+script = ExtResource("3_xus0t")
+
+[node name="Image" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 38.0
+offset_bottom = 34.0
+texture = ExtResource("4_icbli")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

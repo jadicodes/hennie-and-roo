@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg0am2b2u3lp8"]
+
+[ext_resource type="Texture2D" uid="uid://bv1vc0r4yj82n" path="res://hud/shop/shop_bar.png" id="1_1rl5b"]
+[ext_resource type="PackedScene" uid="uid://dbrv8vfp6581n" path="res://hud/image_button/image_button.tscn" id="2_vktti"]
+[ext_resource type="Texture2D" uid="uid://dro320tko4wsg" path="res://hud/chicken_button.png" id="3_01n2w"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ShopBackground" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 204.0
+offset_right = 57.0
+offset_bottom = 336.0
+texture = ExtResource("1_1rl5b")
+stretch_mode = 1
+
+[node name="DecorationButton" parent="." instance=ExtResource("2_vktti")]
+layout_mode = 1
+offset_left = 9.0
+offset_top = 198.0
+offset_right = -583.0
+offset_bottom = -114.0
+image = ExtResource("3_01n2w")
+
+[node name="ImageButton" parent="." instance=ExtResource("2_vktti")]
+layout_mode = 1
+offset_left = 9.0
+offset_top = 252.0
+offset_right = -583.0
+offset_bottom = -60.0
