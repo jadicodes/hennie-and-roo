@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyh3v82dyv54x"]
+
+[ext_resource type="Script" path="res://chicken/chicken.gd" id="1_tb5r0"]
+[ext_resource type="Resource" uid="uid://dylq1l5xucw70" path="res://resources/chickens/chicken_resources/campine/campine.tres" id="2_gfkus"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cemia"]
+radius = 8.0
+height = 22.0
+
+[node name="Chicken" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_tb5r0")
+chicken_type = ExtResource("2_gfkus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cemia")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="DirectionTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
