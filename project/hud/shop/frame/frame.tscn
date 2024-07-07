@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://f7kb8pxu0gtt"]
+[gd_scene load_steps=6 format=3 uid="uid://f7kb8pxu0gtt"]
 
 [ext_resource type="Texture2D" uid="uid://bu23pu40px7hn" path="res://hud/shop/frame/object_shop_frame.png" id="1_w7vvm"]
 [ext_resource type="Texture2D" uid="uid://b2qtwuxy4tsi1" path="res://hud/shop/object_shop_frame_pressed.png" id="2_6x4tg"]
 [ext_resource type="Script" path="res://hud/shop/frame/frame.gd" id="3_nlt3h"]
 [ext_resource type="Texture2D" uid="uid://dro320tko4wsg" path="res://hud/shop/chicken_button.png" id="4_a4l87"]
+[ext_resource type="AudioStream" uid="uid://6byl33fs2fit" path="res://hud/shop/frame/frame_pressed.wav" id="5_yfnnc"]
 
 [node name="Frame" type="TextureButton"]
 anchors_preset = 15
@@ -37,5 +38,8 @@ theme_override_colors/font_color = Color(0.611765, 0.203922, 0.101961, 1)
 theme_override_font_sizes/font_size = 16
 text = "$100"
 horizontal_alignment = 1
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_yfnnc")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

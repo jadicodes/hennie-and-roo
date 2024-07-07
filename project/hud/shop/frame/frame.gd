@@ -24,4 +24,5 @@ func get_price() -> int:
 
 
 func _on_pressed() -> void:
+	$PressedSound.play()
 	emit_signal("purchased")
