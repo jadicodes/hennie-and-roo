@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyh3v82dyv54x"]
 
-[ext_resource type="Script" path="res://chicken/chicken.gd" id="1_tb5r0"]
-[ext_resource type="Resource" uid="uid://dylq1l5xucw70" path="res://resources/chickens/chicken_resources/campine/campine.tres" id="2_gfkus"]
+[ext_resource type="Script" path="res://field/field2D/chicken/chicken.gd" id="1_e58ac"]
+[ext_resource type="Resource" uid="uid://dylq1l5xucw70" path="res://resources/chickens/chicken_resources/campine/campine.tres" id="2_aaowg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cemia"]
 radius = 8.0
@@ -9,8 +9,8 @@ height = 22.0
 
 [node name="Chicken" type="CharacterBody2D"]
 motion_mode = 1
-script = ExtResource("1_tb5r0")
-chicken_type = ExtResource("2_gfkus")
+script = ExtResource("1_e58ac")
+chicken_type = ExtResource("2_aaowg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

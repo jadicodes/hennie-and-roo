@@ -9,8 +9,9 @@ signal purchased
 var _shop_open: bool = false
 var _chicken_shop_open: bool = false
 var _decor_shop_open: bool = false
-var _bought_item: Resource
 
+var _bought_item: Resource
+var _purchase_type: String
 
 func _ready() -> void:
 	for frame in _frames:
@@ -35,13 +36,26 @@ func get_shop_open() -> bool:
 
 func determine_purchase(purchase: Frame) -> void:
 	var id: int = purchase.get_id()
-	_bought_item = _chicken_resources[id]
+
+	if _chicken_shop_open:
+		_bought_item = _chicken_resources[id]
+		_purchase_type = "Chicken"
+	if _decor_shop_open:
+		_bought_item = _decoration_resources[id]
+		_purchase_type = "Decor"
+
 	print("Shop: " + str(_bought_item))
+	print(_purchase_type)
+
 	emit_signal("purchased")
 
 
 func get_bought_item():
 	return _bought_item
+
+
+func get_purchase_type():
+	return _purchase_type
 
 
 # Set shops using information from exported chicken and decoration resources

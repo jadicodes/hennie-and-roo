@@ -2,7 +2,9 @@ extends Control
 
 signal purchased
 
-var item: Resource
+var purchase: Resource
+var purchase_type: String
+
 
 func _ready():
 	$Shop.purchased.connect(_on_purchased)
@@ -12,13 +14,19 @@ func _ready():
 # Signalling purchases up the chain
 
 func _on_purchased():
-	item = $Shop.get_bought_item()
+	purchase = $Shop.get_bought_item()
+	purchase_type = $Shop.get_purchase_type()
+
 	emit_signal("purchased")
-	print("HUD: " + str(item))
+	print("HUD: " + str(purchase))
 
 
-func _get_bought_item():
-	return item
+func _get_purchase() -> Resource:
+	return purchase
+
+
+func get_purchase_type() -> String:
+	return purchase_type
 
 
 func _on_shop_button_pressed() -> void:

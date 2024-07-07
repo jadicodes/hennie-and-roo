@@ -1,17 +1,23 @@
 extends Control
 
-var _purchase
+var purchase: Resource
+var purchase_type: String
 
 
 func _ready():
 	$Hud.purchased.connect(_on_purchased)
 
 
+# Get purchase data and send it to Field2D to make new chicken
+
 func _on_purchased():
-	_purchase = $Hud._get_bought_item()
-	print("Field: " + str(_purchase))
-	_make_chicken()
+	purchase = $Hud._get_purchase()
+	purchase_type = $Hud.get_purchase_type()
 
+	if purchase_type == "Chicken":
+		$Field2D.make_new_chicken(purchase)
+	
+	if purchase_type == "Decor":
+		$Field2D.make_new_decor(purchase)
 
-func _make_chicken():
-	$Field2D.make_new_chicken(_purchase)
+	print("Field: " + str(purchase))
