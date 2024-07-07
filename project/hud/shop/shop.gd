@@ -13,6 +13,7 @@ var _decor_shop_open: bool = false
 var _bought_item: Resource
 var _purchase_type: String
 
+
 func _ready() -> void:
 	for frame in _frames:
 		frame.purchased.connect(determine_purchase.bind(frame))
@@ -44,17 +45,14 @@ func determine_purchase(purchase: Frame) -> void:
 		_bought_item = _decoration_resources[id]
 		_purchase_type = "Decor"
 
-	print("Shop: " + str(_bought_item))
-	print(_purchase_type)
-
 	emit_signal("purchased")
 
 
-func get_bought_item():
+func get_purchase() -> Resource:
 	return _bought_item
 
 
-func get_purchase_type():
+func get_purchase_type() -> String:
 	return _purchase_type
 
 

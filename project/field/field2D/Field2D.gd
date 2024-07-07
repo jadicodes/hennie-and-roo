@@ -5,14 +5,16 @@ var _chicken: Chicken2D
 var _decor: Decoration2D
 
 
-func make_new_chicken(type: Chicken):
+# Make new instance of chicken or decor after purchase
+
+func make_new_chicken(type: Chicken) -> void:
 	_chicken = preload("res://field/field2D/chicken/chicken.tscn").instantiate()
 	_chicken.chicken_type = type
 	call_deferred("add_child", _chicken)
 	_chicken.global_position = Vector2(311, 186)
 
 
-func make_new_decor(type: Decoration):
+func make_new_decor(type: Decoration) -> void:
 	_decor = preload("res://field/field2D/decor/decor.tscn").instantiate()
 	_decor.decor_type = type
 	call_deferred("add_child", _decor)
