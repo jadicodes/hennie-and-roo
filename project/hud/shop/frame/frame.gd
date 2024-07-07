@@ -23,5 +23,5 @@ func get_tex():
 func get_price() -> int:
 	return pri
 
-func _on_pressed():
+func _on_pressed() -> void:
 	emit_signal("purchased")

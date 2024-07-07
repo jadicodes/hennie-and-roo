@@ -23,41 +23,41 @@ var _shop_open: bool = false
 var _chicken_shop_open: bool = false
 var _decor_shop_open: bool = false
 
-func _ready():
+func _ready() -> void:
 	for frame in _frames:
 		frame.purchased.connect(get_purchase.bind(frame))
 
-	Jukebox.play()
 
-
-func set_shop_open(is_open: bool):
+func set_shop_open(is_open: bool) -> void:
 	_shop_open = is_open
 	if !_shop_open:
+		_chicken_shop_open = false
+		_decor_shop_open = false
 		%FrameBackground.hide()
-
+	
 
 func get_shop_open() -> bool:
 	return _shop_open
 
 
-func _set_chicken_shop():
+func _set_chicken_shop() -> void:
 	for i in _chicken_prices.size():
 		_frames[i].set_image(_chicken_images[i])
 		_frames[i].set_price(_chicken_prices[i])
 
 
-func _set_decor_shop():
+func _set_decor_shop() -> void:
 	for i in _decor_prices.size():
 		_frames[i].set_image(_decor_images[i])
 		_frames[i].set_price(_decor_prices[i])
 
 
-func get_purchase(purchase: Frame):
+func get_purchase(purchase: Frame) -> void:
 	purchase.get_price()
 	print(purchase.get_price())
 
 
-func _on_chicken_button_pressed():
+func _on_chicken_button_pressed() -> void:
 	if _chicken_shop_open:
 		_chicken_shop_open = false
 		%FrameBackground.hide()
@@ -66,9 +66,9 @@ func _on_chicken_button_pressed():
 		_decor_shop_open = false
 		%FrameBackground.show()
 		_set_chicken_shop()
-	print(_chicken_shop_open)
 
-func _on_decoration_button_pressed():
+
+func _on_decoration_button_pressed() -> void:
 	if _decor_shop_open:
 		_decor_shop_open = false
 		%FrameBackground.hide()
@@ -77,5 +77,3 @@ func _on_decoration_button_pressed():
 		_chicken_shop_open = false
 		%FrameBackground.show()
 		_set_decor_shop()
-	print(_decor_shop_open)
-
