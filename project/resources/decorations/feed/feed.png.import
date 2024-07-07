@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw5ltvyloq8x4"
-path="res://.godot/imported/hay_bale.png-75460bb125c13fd4410ae43d97f5e37c.ctex"
+uid="uid://b3ucawbsv1xfm"
+path="res://.godot/imported/feed.png-279b2b20095da4219612bcd4aa248d1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/decorations/hay_bale.png"
-dest_files=["res://.godot/imported/hay_bale.png-75460bb125c13fd4410ae43d97f5e37c.ctex"]
+source_file="res://resources/decorations/feed/feed.png"
+dest_files=["res://.godot/imported/feed.png-279b2b20095da4219612bcd4aa248d1f.ctex"]
 
 [params]
 

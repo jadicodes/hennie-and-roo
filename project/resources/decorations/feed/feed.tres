@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Decoration" load_steps=3 format=3 uid="uid://c8ok5rg6qnafk"]
+
+[ext_resource type="Script" path="res://resources/decorations/decoration.gd" id="1_87kp0"]
+[ext_resource type="Texture2D" uid="uid://b3ucawbsv1xfm" path="res://resources/decorations/feed/feed.png" id="1_pic7d"]
+
+[resource]
+script = ExtResource("1_87kp0")
+name = "Feed"
+price = 50
+image = ExtResource("1_pic7d")
