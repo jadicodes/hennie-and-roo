@@ -1,8 +1,24 @@
 extends Control
 
+signal purchased
+
+var item: Resource
 
 func _ready():
+	$Shop.purchased.connect(_on_purchased)
 	Jukebox.play()
+
+
+# Signalling purchases up the chain
+
+func _on_purchased():
+	item = $Shop.get_bought_item()
+	emit_signal("purchased")
+	print("HUD: " + str(item))
+
+
+func _get_bought_item():
+	return item
 
 
 func _on_shop_button_pressed() -> void:

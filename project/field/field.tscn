@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://53235pf8rm81"]
+[gd_scene load_steps=12 format=3 uid="uid://53235pf8rm81"]
 
 [ext_resource type="Texture2D" uid="uid://dnq7xkem3np8o" path="res://field/grass.png" id="1_lruoc"]
 [ext_resource type="Script" path="res://field/Field2D.gd" id="1_lw8pk"]
+[ext_resource type="Script" path="res://field/field.gd" id="1_mwej4"]
 [ext_resource type="Texture2D" uid="uid://c1o2ykgpo365e" path="res://field/floor.png" id="2_s71p4"]
 [ext_resource type="PackedScene" uid="uid://de4ucf6pwx7ws" path="res://hud/HUD.tscn" id="3_w4n28"]
 [ext_resource type="PackedScene" uid="uid://cyh3v82dyv54x" path="res://chicken/chicken.tscn" id="4_ue843"]
@@ -35,6 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+script = ExtResource("1_mwej4")
 
 [node name="Field2D" type="Node2D" parent="."]
 y_sort_enabled = true

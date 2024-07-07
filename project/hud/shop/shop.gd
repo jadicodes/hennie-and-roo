@@ -1,5 +1,7 @@
 extends Control
 
+signal purchased
+
 @export var _chicken_resources: Array[Chicken]
 @export var _decoration_resources: Array[Decoration]
 @export var _frames : Array[Frame] = []
@@ -7,11 +9,12 @@ extends Control
 var _shop_open: bool = false
 var _chicken_shop_open: bool = false
 var _decor_shop_open: bool = false
+var _bought_item: Resource
 
 
 func _ready() -> void:
 	for frame in _frames:
-		frame.purchased.connect(get_purchase.bind(frame))
+		frame.purchased.connect(determine_purchase.bind(frame))
 
 
 # Open and close shop panel
@@ -30,9 +33,15 @@ func get_shop_open() -> bool:
 
 # Determine which item was purchased after frame is pressed
 
-func get_purchase(purchase: Frame) -> void:
-	var id = purchase.get_id()
-	print(id)
+func determine_purchase(purchase: Frame) -> void:
+	var id: int = purchase.get_id()
+	_bought_item = _chicken_resources[id]
+	print("Shop: " + str(_bought_item))
+	emit_signal("purchased")
+
+
+func get_bought_item():
+	return _bought_item
 
 
 # Set shops using information from exported chicken and decoration resources
