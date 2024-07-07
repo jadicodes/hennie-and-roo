@@ -6,9 +6,8 @@ signal purchased(price)
 var pri
 var tex
 
-func set_image(image: String) -> void:
-	tex = load(image)
-	%ObjectImage.texture = tex
+func set_image(image: CompressedTexture2D) -> void:
+	%ObjectImage.texture = image
 
 
 func set_price(price: int) -> void:
@@ -22,6 +21,7 @@ func get_tex():
 
 func get_price() -> int:
 	return pri
+
 
 func _on_pressed() -> void:
 	emit_signal("purchased")

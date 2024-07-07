@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbgj8vl8gec05"
-path="res://.godot/imported/red.png-fd255fdebbda47a8189abd09f8b0af93.ctex"
+uid="uid://dixhs2iic8tdm"
+path="res://.godot/imported/potted_plant.png-898ca4d61cf863df57a5770e8b5f2931.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chickens/red.png"
-dest_files=["res://.godot/imported/red.png-fd255fdebbda47a8189abd09f8b0af93.ctex"]
+source_file="res://resources/decorations/potted_plant/potted_plant.png"
+dest_files=["res://.godot/imported/potted_plant.png-898ca4d61cf863df57a5770e8b5f2931.ctex"]
 
 [params]
 

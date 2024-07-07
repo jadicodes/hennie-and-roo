@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Decoration" load_steps=3 format=3 uid="uid://bs0gnvqfmei52"]
+
+[ext_resource type="Texture2D" uid="uid://dixhs2iic8tdm" path="res://resources/decorations/potted_plant/potted_plant.png" id="1_wtqo4"]
+[ext_resource type="Script" path="res://resources/decorations/decoration.gd" id="2_sf8e6"]
+
+[resource]
+script = ExtResource("2_sf8e6")
+name = "Potted Plant"
+price = 40
+image = ExtResource("1_wtqo4")

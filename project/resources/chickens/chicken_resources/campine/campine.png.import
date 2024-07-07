@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c45dh1o7vh0j"
-path="res://.godot/imported/campine.png-34f29ae1ae748f18e1a7f9377a15b040.ctex"
+path="res://.godot/imported/campine.png-be8e28a3c651a44c0ea2fe67d7754b06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chickens/campine.png"
-dest_files=["res://.godot/imported/campine.png-34f29ae1ae748f18e1a7f9377a15b040.ctex"]
+source_file="res://resources/chickens/chicken_resources/campine/campine.png"
+dest_files=["res://.godot/imported/campine.png-be8e28a3c651a44c0ea2fe67d7754b06.ctex"]
 
 [params]
 

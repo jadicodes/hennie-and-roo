@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Decoration" load_steps=3 format=3 uid="uid://xsrj0pqv6aek"]
+
+[ext_resource type="Texture2D" uid="uid://djieqn7g0k8u3" path="res://resources/decorations/hay_bale/hay_bale.png" id="1_al6h0"]
+[ext_resource type="Script" path="res://resources/decorations/decoration.gd" id="1_l1t3a"]
+
+[resource]
+script = ExtResource("1_l1t3a")
+name = "Hay Bale"
+price = 75
+image = ExtResource("1_al6h0")

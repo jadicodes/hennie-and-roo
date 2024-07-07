@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Chicken" load_steps=3 format=3 uid="uid://dylq1l5xucw70"]
+
+[ext_resource type="Script" path="res://resources/chickens/chicken.gd" id="1_alvty"]
+[ext_resource type="Texture2D" uid="uid://c45dh1o7vh0j" path="res://resources/chickens/chicken_resources/campine/campine.png" id="1_vbs0o"]
+
+[resource]
+script = ExtResource("1_alvty")
+name = "Campine"
+price = 300
+eggs_per_week = 7
+image = ExtResource("1_vbs0o")
