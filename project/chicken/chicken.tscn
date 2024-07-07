@@ -22,4 +22,8 @@ shape = SubResource("CapsuleShape2D_cemia")
 wait_time = 3.0
 autostart = true
 
+[node name="EggLayTimer" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
+[connection signal="timeout" from="EggLayTimer" to="." method="_on_egg_lay_timer_timeout"]

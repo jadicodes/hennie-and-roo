@@ -3,8 +3,16 @@ extends TextureButton
 
 signal purchased(price)
 
-var pri
-var tex
+var id: int
+var pri: int
+var tex: CompressedTexture2D
+
+
+# Setters
+
+func set_id(number) -> void:
+	id = number
+
 
 func set_image(image: CompressedTexture2D) -> void:
 	%ObjectImage.texture = image
@@ -15,6 +23,12 @@ func set_price(price: int) -> void:
 	%PriceLabel.text = "$" + str(price)
 
 
+# Getters
+
+func get_id() -> int:
+	return id
+
+
 func get_tex():
 	return tex
 
@@ -22,6 +36,8 @@ func get_tex():
 func get_price() -> int:
 	return pri
 
+
+# Effects when frame is pressed
 
 func _on_pressed() -> void:
 	$PressedSound.play()

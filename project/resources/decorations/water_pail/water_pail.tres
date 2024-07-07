@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Decoration" load_steps=3 format=3 uid="uid://byy5gmrurdu8y"]
+
+[ext_resource type="Script" path="res://resources/decorations/decoration.gd" id="1_jekay"]
+[ext_resource type="Texture2D" uid="uid://bgxg1twjeyi0h" path="res://hud/shop/decoration_button.png" id="1_v2jj6"]
+
+[resource]
+script = ExtResource("1_jekay")
+name = "Water Pail"
+price = 15
+image = ExtResource("1_v2jj6")

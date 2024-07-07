@@ -1,17 +1,21 @@
-[gd_scene load_steps=14 format=3 uid="uid://dg0am2b2u3lp8"]
+[gd_scene load_steps=18 format=3 uid="uid://dg0am2b2u3lp8"]
 
 [ext_resource type="Texture2D" uid="uid://bv1vc0r4yj82n" path="res://hud/shop/shop_bar.png" id="1_1rl5b"]
 [ext_resource type="Script" path="res://hud/shop/shop.gd" id="1_80qp1"]
 [ext_resource type="Resource" uid="uid://dylq1l5xucw70" path="res://resources/chickens/chicken_resources/campine/campine.tres" id="2_4x3an"]
+[ext_resource type="Resource" uid="uid://debi7q31oftuj" path="res://resources/chickens/chicken_resources/golden_comet/golden_comet.tres" id="2_bgvv1"]
 [ext_resource type="PackedScene" uid="uid://dbrv8vfp6581n" path="res://hud/image_button/image_button.tscn" id="2_vktti"]
 [ext_resource type="Texture2D" uid="uid://bgxg1twjeyi0h" path="res://hud/shop/decoration_button.png" id="3_1q3ns"]
 [ext_resource type="Resource" uid="uid://bl6731dk2fo32" path="res://resources/chickens/chicken_resources/rhode_island_red/rhode_island_red.tres" id="3_me63v"]
+[ext_resource type="Resource" uid="uid://bq6gln4jwp2xt" path="res://resources/chickens/chicken_resources/australorp/australorp.tres" id="4_a7yte"]
 [ext_resource type="Resource" uid="uid://bs0gnvqfmei52" path="res://resources/decorations/potted_plant/potted_plant.tres" id="4_tvhmx"]
 [ext_resource type="PackedScene" uid="uid://f7kb8pxu0gtt" path="res://hud/shop/frame/frame.tscn" id="5_e2mli"]
 [ext_resource type="Resource" uid="uid://xsrj0pqv6aek" path="res://resources/decorations/hay_bale/hay_bale.tres" id="5_hhtl0"]
 [ext_resource type="Texture2D" uid="uid://dyxiqtpfehkco" path="res://hud/shop/shop_background.png" id="5_m2k3h"]
+[ext_resource type="Resource" uid="uid://fd4rmkb3ifqe" path="res://resources/chickens/chicken_resources/speckled_sussex/speckled_sussex.tres" id="5_poeur"]
 [ext_resource type="Resource" uid="uid://c8ok5rg6qnafk" path="res://resources/decorations/feed/feed.tres" id="5_pyma4"]
 [ext_resource type="Texture2D" uid="uid://dbex2rq4ulmma" path="res://hud/shop/shop_background_border.png" id="6_5m5bl"]
+[ext_resource type="Resource" uid="uid://byy5gmrurdu8y" path="res://resources/decorations/water_pail/water_pail.tres" id="7_05bnt"]
 [ext_resource type="Resource" uid="uid://bmbfsymjq51gq" path="res://resources/decorations/statue/statue.tres" id="7_rcnjc"]
 
 [node name="Shop" type="Control" node_paths=PackedStringArray("_frames")]
@@ -22,8 +26,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_80qp1")
-_chicken_resources = Array[Resource("res://resources/chickens/chicken.gd")]([ExtResource("3_me63v"), ExtResource("2_4x3an")])
-_decoration_resources = Array[Resource("res://resources/decorations/decoration.gd")]([ExtResource("4_tvhmx"), ExtResource("5_pyma4"), ExtResource("5_hhtl0"), ExtResource("7_rcnjc")])
+_chicken_resources = Array[Resource("res://resources/chickens/chicken.gd")]([ExtResource("2_bgvv1"), ExtResource("5_poeur"), ExtResource("4_a7yte"), ExtResource("3_me63v"), ExtResource("2_4x3an")])
+_decoration_resources = Array[Resource("res://resources/decorations/decoration.gd")]([ExtResource("7_05bnt"), ExtResource("4_tvhmx"), ExtResource("5_pyma4"), ExtResource("5_hhtl0"), ExtResource("7_rcnjc")])
 _frames = [NodePath("FrameBackground/Frame0"), NodePath("FrameBackground/Frame1"), NodePath("FrameBackground/Frame2"), NodePath("FrameBackground/Frame3"), NodePath("FrameBackground/Frame4")]
 
 [node name="ShopButtonsBackground" type="TextureRect" parent="."]
