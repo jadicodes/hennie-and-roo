@@ -16,7 +16,6 @@ func make_new_chicken(type: Chicken) -> void:
 
 
 func make_new_decor(type: Decoration) -> void:
-	print(type)
 	_decor = preload("res://field/field2D/decor/decor.tscn").instantiate()
 	_decor.decor_type = type
 	call_deferred("add_child", _decor)
