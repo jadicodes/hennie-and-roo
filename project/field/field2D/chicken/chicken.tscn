@@ -23,7 +23,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="EggLayTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 20.0
 autostart = true
 
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
