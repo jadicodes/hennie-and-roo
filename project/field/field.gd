@@ -19,3 +19,5 @@ func _on_purchased() -> void:
 	
 	if purchase_type == "Decor":
 		$Field2D.make_new_decor(purchase)
+	
+	print(purchase.name)

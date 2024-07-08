@@ -12,6 +12,7 @@ var tex: CompressedTexture2D
 
 func set_id(number) -> void:
 	id = number
+	print(id)
 
 
 func set_image(image: CompressedTexture2D) -> void:

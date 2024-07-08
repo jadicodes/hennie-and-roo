@@ -10,8 +10,8 @@ var _shop_open: bool = false
 var _chicken_shop_open: bool = false
 var _decor_shop_open: bool = false
 
-var _bought_item: Resource
-var _purchase_type: String
+var purchase: Resource
+var purchase_type: String
 
 
 func _ready() -> void:
@@ -35,25 +35,26 @@ func get_shop_open() -> bool:
 
 # Determine which item was purchased after frame is pressed
 
-func determine_purchase(purchase: Frame) -> void:
-	var id: int = purchase.get_id()
+func determine_purchase(frame: Frame) -> void:
+	var id: int = frame.get_id()
 
 	if _chicken_shop_open:
-		_bought_item = _chicken_resources[id]
-		_purchase_type = "Chicken"
+		purchase = _chicken_resources[id]
+		purchase_type = "Chicken"
 	if _decor_shop_open:
-		_bought_item = _decoration_resources[id]
-		_purchase_type = "Decor"
+		purchase = _decoration_resources[id]
+		purchase_type = "Decor"
 
 	emit_signal("purchased")
+	print(purchase.name)
 
 
 func get_purchase() -> Resource:
-	return _bought_item
+	return purchase
 
 
 func get_purchase_type() -> String:
-	return _purchase_type
+	return purchase_type
 
 
 # Set shops using information from exported chicken and decoration resources
@@ -69,6 +70,7 @@ func _set_decor_shop() -> void:
 	for i in _decoration_resources.size():
 		_frames[i].set_image(_decoration_resources[i].image)
 		_frames[i].set_price(_decoration_resources[i].price)
+		_frames[i].set_id(i)
 
 
 # Show and hide chicken and decoration menus when buttons are pressed
