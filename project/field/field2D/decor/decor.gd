@@ -17,9 +17,10 @@ func _physics_process(_delta) -> void:
 
 
 func _input(_event):
-	if Input.is_action_pressed("place") and not _placed:
+	if not _placed and Input.is_action_pressed("place"):
 		_placed = true
 		global_position = get_global_mouse_position()
+		set_physics_process(false)
 
 
 # Using properties from resource to set decor properties

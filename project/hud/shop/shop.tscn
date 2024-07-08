@@ -25,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_80qp1")
 _chicken_resources = Array[Resource("res://resources/chickens/chicken.gd")]([ExtResource("2_bgvv1"), ExtResource("5_poeur"), ExtResource("4_a7yte"), ExtResource("3_me63v"), ExtResource("2_4x3an")])
 _decoration_resources = Array[Resource("res://resources/decorations/decoration.gd")]([ExtResource("7_05bnt"), ExtResource("4_tvhmx"), ExtResource("5_pyma4"), ExtResource("5_hhtl0"), ExtResource("7_rcnjc")])

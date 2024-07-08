@@ -46,7 +46,6 @@ func determine_purchase(frame: Frame) -> void:
 		purchase_type = "Decor"
 
 	emit_signal("purchased")
-	print(purchase.name)
 
 
 func get_purchase() -> Resource:

@@ -18,7 +18,6 @@ func _on_purchased() -> void:
 	purchase_type = $Shop.get_purchase_type()
 
 	emit_signal("purchased")
-	print(purchase.name)
 
 
 func _get_purchase() -> Resource:

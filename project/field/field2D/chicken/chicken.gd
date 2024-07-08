@@ -25,6 +25,10 @@ func _set_chicken_properties() -> void:
 	_eggs_per_week = chicken_type.eggs_per_week
 
 
+func get_chicken_type() -> Chicken:
+	return chicken_type
+
+
 # Physics process
 
 func _physics_process(_delta) -> void:
