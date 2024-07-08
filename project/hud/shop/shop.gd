@@ -10,6 +10,7 @@ var _shop_open: bool = false
 var _chicken_shop_open: bool = false
 var _decor_shop_open: bool = false
 
+
 var purchase: Resource
 var purchase_type: String
 

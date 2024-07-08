@@ -56,4 +56,5 @@ func _subtract_coins(number):
 
 
 func _update_coins_label():
+	_coins = clamp(_coins, 0, 99999)
 	%CoinsLabel.text = "$" + str(_coins)
