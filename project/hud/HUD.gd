@@ -45,16 +45,16 @@ func _on_shop_button_pressed() -> void:
 
 # Coin Panel management
 
-func _add_coins(number):
+func _add_coins(number) -> void:
 	_coins += number
 	_update_coins_label()
 
 
-func _subtract_coins(number):
+func _subtract_coins(number) -> void:
 	_coins -= number
 	_update_coins_label()
 
 
-func _update_coins_label():
+func _update_coins_label() -> void:
 	_coins = clamp(_coins, 0, 99999)
 	%CoinsLabel.text = "$" + str(_coins)

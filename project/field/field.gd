@@ -6,6 +6,8 @@ var purchase_type: String
 var _chicken: Chicken2D
 
 
+# Connect signals
+
 func _ready() -> void:
 	$Hud.purchased.connect(_on_purchased)
 	$Field2D.egg_sold.connect(_add_egg_price)
@@ -24,6 +26,8 @@ func _on_purchased() -> void:
 		$Field2D.make_new_decor(purchase)
 
 
-func _add_egg_price():
+# Send egg price to HUD so that coin amount can be updated
+
+func _add_egg_price() -> void:
 	var egg_price = $Field2D.get_egg_price()
 	$Hud._add_coins(egg_price)

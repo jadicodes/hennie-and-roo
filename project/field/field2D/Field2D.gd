@@ -25,7 +25,7 @@ func make_new_decor(type: Decoration) -> void:
 	_decor.global_position = Vector2(5, 5)
 
 
-func _make_new_egg(mother: Chicken2D):
+func _make_new_egg(mother: Chicken2D) -> void:
 	var type: Chicken = mother.get_chicken_type()
 	_egg = preload("res://field/field2D/egg/egg.tscn").instantiate()
 	_egg.egg_sold.connect(set_egg_price.bind(_egg))
@@ -35,10 +35,10 @@ func _make_new_egg(mother: Chicken2D):
 	_egg.global_position = mother.global_position
 
 
-func set_egg_price(egg):
+func set_egg_price(egg: Egg) -> void:
 	egg_price = egg._get_price()
 	emit_signal("egg_sold")
 
 
-func get_egg_price():
+func get_egg_price() -> int:
 	return egg_price

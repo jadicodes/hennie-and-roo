@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://bgxjcnkcigv2k" path="res://resources/chickens/egg_beige.png" id="1_hsiks"]
 [ext_resource type="Script" path="res://resources/chickens/chicken.gd" id="1_pf4hf"]
-[ext_resource type="Texture2D" uid="uid://bgxg1twjeyi0h" path="res://hud/shop/decoration_button.png" id="1_x3jlh"]
+[ext_resource type="Texture2D" uid="uid://cmh8jcvv8rbum" path="res://resources/chickens/chicken_resources/australorp/australorp.png" id="2_kjwp5"]
 
 [resource]
 script = ExtResource("1_pf4hf")
 name = "Australorp"
 price = 50
 eggs_per_week = 3
-image = ExtResource("1_x3jlh")
+image = ExtResource("2_kjwp5")
 egg_value = 2
 egg_image = ExtResource("1_hsiks")

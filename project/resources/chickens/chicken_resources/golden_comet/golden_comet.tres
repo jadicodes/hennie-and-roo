@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://bgxjcnkcigv2k" path="res://resources/chickens/egg_beige.png" id="1_c0nfn"]
 [ext_resource type="Script" path="res://resources/chickens/chicken.gd" id="1_ovak3"]
-[ext_resource type="Texture2D" uid="uid://bgxg1twjeyi0h" path="res://hud/shop/decoration_button.png" id="1_vnopu"]
+[ext_resource type="Texture2D" uid="uid://2y48sb27w4m2" path="res://resources/chickens/chicken_resources/golden_comet/golden_comet.png" id="2_2cvws"]
 
 [resource]
 script = ExtResource("1_ovak3")
 name = "Golden Comet"
 price = 15
 eggs_per_week = 1
-image = ExtResource("1_vnopu")
+image = ExtResource("2_2cvws")
 egg_value = 1
 egg_image = ExtResource("1_c0nfn")

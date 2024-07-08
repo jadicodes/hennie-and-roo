@@ -89,5 +89,6 @@ func _on_direction_timer_timeout() -> void:
 
 func _on_egg_lay_timer_timeout() -> void:
 	var check_egg_lay = randi_range(0, _eggs_per_week)
-	if check_egg_lay <= _eggs_per_week:
+	var random = randi_range(0, 7)
+	if check_egg_lay <= random:
 		emit_signal("egg_laid")
