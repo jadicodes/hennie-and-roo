@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_alvty")
 name = "Campine"
-price = 10000
+price = 300
 eggs_per_week = 7
 image = ExtResource("1_vbs0o")
 egg_value = 8

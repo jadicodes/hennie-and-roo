@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyh3v82dyv54x"]
+[gd_scene load_steps=5 format=3 uid="uid://cyh3v82dyv54x"]
 
 [ext_resource type="Script" path="res://field/field2D/chicken/chicken.gd" id="1_e58ac"]
 [ext_resource type="Resource" uid="uid://dylq1l5xucw70" path="res://resources/chickens/chicken_resources/campine/campine.tres" id="2_aaowg"]
+[ext_resource type="AudioStream" uid="uid://d4i1w30ywkf33" path="res://field/field2D/laid.wav" id="3_gqomb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cemia"]
 radius = 8.0
@@ -25,6 +26,9 @@ autostart = true
 [node name="EggLayTimer" type="Timer" parent="."]
 wait_time = 20.0
 autostart = true
+
+[node name="EggLaidSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gqomb")
 
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
 [connection signal="timeout" from="EggLayTimer" to="." method="_on_egg_lay_timer_timeout"]
