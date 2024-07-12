@@ -93,3 +93,7 @@ func _on_egg_lay_timer_timeout() -> void:
 	if check_egg_lay >= random:
 		emit_signal("egg_laid")
 		$EggLaidSound.play()
+
+
+func get_egg_position() -> Vector2:
+	return $EggMarker.global_position

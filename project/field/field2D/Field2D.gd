@@ -32,7 +32,7 @@ func _make_new_egg(mother: Chicken2D) -> void:
 	call_deferred("add_child", _egg)
 
 	_egg.set_chicken_type(type)
-	_egg.global_position = mother.global_position
+	_egg.global_position = mother.get_egg_position()
 
 
 func set_egg_price(egg: Egg) -> void:
