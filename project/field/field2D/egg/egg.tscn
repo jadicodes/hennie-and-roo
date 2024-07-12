@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bgxjcnkcigv2k" path="res://resources/chickens/egg_beige.png" id="1_l52kk"]
 
 [node name="Egg" type="TextureButton"]
+offset_right = 8.0
+offset_bottom = 8.0
+pivot_offset = Vector2(4, 5)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_l52kk")
 script = ExtResource("1_2m3d8")
