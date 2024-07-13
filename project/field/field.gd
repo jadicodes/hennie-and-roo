@@ -4,13 +4,25 @@ var purchase: Resource
 var purchase_type: String
 
 var _chicken: Chicken2D
-
+var _paused: bool = false
 
 # Connect signals
 
 func _ready() -> void:
 	%Hud.purchased.connect(_on_purchased)
 	$Field2D.egg_sold.connect(_add_egg_price)
+
+
+func _input(_event) -> void:
+	if Input.is_action_just_pressed("pause"):
+		if _paused:
+			%Pause.hide()
+			Engine.time_scale = 1
+		else:
+			%Pause.show()
+			Engine.time_scale = 0
+		
+		_paused = !_paused
 
 
 # Get purchase data and send it to Field2D to make new chicken

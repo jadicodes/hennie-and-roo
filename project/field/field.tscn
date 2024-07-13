@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://53235pf8rm81"]
+[gd_scene load_steps=17 format=3 uid="uid://53235pf8rm81"]
 
 [ext_resource type="Texture2D" uid="uid://dnq7xkem3np8o" path="res://field/grass.png" id="1_lruoc"]
 [ext_resource type="Script" path="res://field/field2D/field2D.gd" id="1_lw8pk"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cvsf1pio7uwqf" path="res://field/fence.png" id="5_q40j8"]
 [ext_resource type="Texture2D" uid="uid://cit6sq8apasg0" path="res://field/tree.png" id="6_enrdf"]
 [ext_resource type="Script" path="res://field/Camera.gd" id="6_xhjx3"]
+[ext_resource type="PackedScene" uid="uid://bddc02kb2qhm0" path="res://pause_menu/pause_menu.tscn" id="9_c8em4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pyppg"]
 texture = ExtResource("5_q40j8")
@@ -132,4 +133,8 @@ script = ExtResource("6_xhjx3")
 unique_name_in_owner = true
 mouse_filter = 2
 
-[node name="PauseMenu" type="CanvasLayer" parent="."]
+[node name="Pause" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="PauseMenu" parent="Pause" instance=ExtResource("9_c8em4")]
