@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://resources/chickens/chicken.gd" id="1_a5r2t"]
 [ext_resource type="Texture2D" uid="uid://bbgj8vl8gec05" path="res://resources/chickens/chicken_resources/rhode_island_red/red.png" id="1_c1uhr"]
-[ext_resource type="Texture2D" uid="uid://bgxjcnkcigv2k" path="res://resources/chickens/egg_beige.png" id="1_kbr5q"]
+[ext_resource type="Texture2D" uid="uid://bi07ly5l48o0r" path="res://resources/chickens/chicken_resources/rhode_island_red/red_egg.png" id="1_m4v2t"]
 
 [resource]
 script = ExtResource("1_a5r2t")
@@ -11,4 +11,4 @@ price = 150
 eggs_per_week = 4
 image = ExtResource("1_c1uhr")
 egg_value = 4
-egg_image = ExtResource("1_kbr5q")
+egg_image = ExtResource("1_m4v2t")

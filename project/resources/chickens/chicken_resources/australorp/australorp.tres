@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Chicken" load_steps=4 format=3 uid="uid://bq6gln4jwp2xt"]
 
-[ext_resource type="Texture2D" uid="uid://bgxjcnkcigv2k" path="res://resources/chickens/egg_beige.png" id="1_hsiks"]
 [ext_resource type="Script" path="res://resources/chickens/chicken.gd" id="1_pf4hf"]
+[ext_resource type="Texture2D" uid="uid://cnin46f7tqfkv" path="res://resources/chickens/chicken_resources/australorp/aust_egg.png" id="1_v7vpp"]
 [ext_resource type="Texture2D" uid="uid://cmh8jcvv8rbum" path="res://resources/chickens/chicken_resources/australorp/australorp.png" id="2_kjwp5"]
 
 [resource]
@@ -11,4 +11,4 @@ price = 50
 eggs_per_week = 3
 image = ExtResource("2_kjwp5")
 egg_value = 2
-egg_image = ExtResource("1_hsiks")
+egg_image = ExtResource("1_v7vpp")

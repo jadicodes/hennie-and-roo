@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://vhdx0wyivrtu"]
 
 [ext_resource type="Script" path="res://field/field2D/egg/egg.gd" id="1_2m3d8"]
-[ext_resource type="Texture2D" uid="uid://bgxjcnkcigv2k" path="res://resources/chickens/egg_beige.png" id="1_l52kk"]
+[ext_resource type="Texture2D" uid="uid://bgxjcnkcigv2k" path="res://resources/chickens/chicken_resources/golden_comet/comet_egg.png" id="1_l52kk"]
 
 [node name="Egg" type="TextureButton"]
 offset_right = 8.0

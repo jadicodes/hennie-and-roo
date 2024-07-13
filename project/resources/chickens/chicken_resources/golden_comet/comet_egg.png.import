@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgxjcnkcigv2k"
-path="res://.godot/imported/egg_beige.png-115081693189e9ceb7957c079072191d.ctex"
+path="res://.godot/imported/comet_egg.png-e56caf7f284758ecfee9cb3ff83790fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/chickens/egg_beige.png"
-dest_files=["res://.godot/imported/egg_beige.png-115081693189e9ceb7957c079072191d.ctex"]
+source_file="res://resources/chickens/chicken_resources/golden_comet/comet_egg.png"
+dest_files=["res://.godot/imported/comet_egg.png-e56caf7f284758ecfee9cb3ff83790fb.ctex"]
 
 [params]
 
