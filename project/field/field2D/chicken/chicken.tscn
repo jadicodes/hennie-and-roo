@@ -33,6 +33,7 @@ autostart = true
 
 [node name="EggLaidSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_gqomb")
+bus = &"Sound Effects"
 
 [node name="EggMarker" type="Marker2D" parent="."]
 position = Vector2(0, 17)

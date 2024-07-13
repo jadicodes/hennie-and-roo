@@ -131,3 +131,5 @@ script = ExtResource("6_xhjx3")
 [node name="Hud" parent="HudLayer" instance=ExtResource("3_w4n28")]
 unique_name_in_owner = true
 mouse_filter = 2
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]

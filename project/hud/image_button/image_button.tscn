@@ -31,6 +31,7 @@ texture = ExtResource("4_0piun")
 [node name="PressedSound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_pe35e")
+bus = &"Sound Effects"
 
 [connection signal="button_down" from="." to="." method="_on_button_down"]
 [connection signal="button_up" from="." to="." method="_on_button_up"]

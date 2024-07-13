@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://bddc02kb2qhm0"]
+
+[ext_resource type="Script" path="res://pause_menu/volume_slider.gd" id="1_cy7rg"]
+[ext_resource type="Texture2D" uid="uid://hr1adrnlb8e2" path="res://pause_menu/grabber.png" id="1_vkn1w"]
+[ext_resource type="Texture2D" uid="uid://cij724g1snjxq" path="res://pause_menu/grabber_highlight.png" id="2_ej44x"]
+[ext_resource type="AudioStream" uid="uid://b44rrtejun56f" path="res://jukebox/good_town.wav" id="2_sdx3q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aesro"]
+bg_color = Color(0.113725, 0.482353, 0.403922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhvr2"]
+bg_color = Color(0.266667, 0.615686, 0.572549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym3mu"]
+bg_color = Color(0.113725, 0.482353, 0.403922, 1)
+border_color = Color(0.670588, 0.823529, 0.94902, 1)
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aesro")
+
+[node name="PauseMenuVBox" type="VBoxContainer" parent="BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PausedLabel" type="Label" parent="BackgroundPanel/PauseMenuVBox"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 64
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="SettingsPanel" type="Panel" parent="BackgroundPanel/PauseMenuVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_fhvr2")
+
+[node name="VolumePanel" type="Panel" parent="BackgroundPanel/PauseMenuVBox/SettingsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = -67.0
+offset_right = 134.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ym3mu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanel/PauseMenuVBox/SettingsPanel/VolumePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MasterVolumeLabel" type="Label" parent="BackgroundPanel/PauseMenuVBox/SettingsPanel/VolumePanel/VBoxContainer"]
+layout_mode = 2
+text = "Master Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolumeSlider" type="HSlider" parent="BackgroundPanel/PauseMenuVBox/SettingsPanel/VolumePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("1_vkn1w")
+theme_override_icons/grabber_highlight = ExtResource("2_ej44x")
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_cy7rg")
+bus_name = "Master"
+
+[node name="MusicVolumeLabel" type="Label" parent="BackgroundPanel/PauseMenuVBox/SettingsPanel/VolumePanel/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeSlider" type="HSlider" parent="BackgroundPanel/PauseMenuVBox/SettingsPanel/VolumePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("1_vkn1w")
+theme_override_icons/grabber_highlight = ExtResource("2_ej44x")
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_cy7rg")
+bus_name = "Music"
+
+[node name="SFXVolumeLabel" type="Label" parent="BackgroundPanel/PauseMenuVBox/SettingsPanel/VolumePanel/VBoxContainer"]
+layout_mode = 2
+text = "Sound Effects Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXVolumeSlider" type="HSlider" parent="BackgroundPanel/PauseMenuVBox/SettingsPanel/VolumePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("1_vkn1w")
+theme_override_icons/grabber_highlight = ExtResource("2_ej44x")
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_cy7rg")
+bus_name = "Sound Effects"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_sdx3q")
+autoplay = true
+bus = &"Music"
