@@ -21,7 +21,7 @@ func _input(_event) -> void:
 		else:
 			%Pause.show()
 			Engine.time_scale = 0
-		
+
 		_paused = !_paused
 
 
