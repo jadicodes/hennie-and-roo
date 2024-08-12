@@ -97,6 +97,7 @@ script = ExtResource("1_mwej4")
 [node name="Field2D" type="Node2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("1_lw8pk")
+metadata/_edit_lock_ = true
 
 [node name="Fence" type="TileMap" parent="Field2D"]
 y_sort_enabled = true
@@ -133,6 +134,7 @@ script = ExtResource("6_xhjx3")
 [node name="Hud" parent="HudLayer" instance=ExtResource("3_w4n28")]
 unique_name_in_owner = true
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="Pause" type="CanvasLayer" parent="."]
 unique_name_in_owner = true

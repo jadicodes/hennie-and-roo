@@ -42,4 +42,4 @@ func _on_purchased() -> void:
 
 func _add_egg_price() -> void:
 	var egg_price = $Field2D.get_egg_price()
-	%Hud._add_coins(egg_price)
+	%Hud/%CoinsPanel.add_coins(egg_price)

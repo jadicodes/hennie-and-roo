@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://de4ucf6pwx7ws"]
 
-[ext_resource type="Texture2D" uid="uid://chtuuedfcxlv6" path="res://hud/coin_sign.png" id="1_34m5u"]
 [ext_resource type="Script" path="res://hud/HUD.gd" id="1_vvp1l"]
 [ext_resource type="PackedScene" uid="uid://dg0am2b2u3lp8" path="res://hud/shop/shop.tscn" id="5_01mhw"]
 [ext_resource type="PackedScene" uid="uid://dbrv8vfp6581n" path="res://hud/image_button/image_button.tscn" id="6_4hn1r"]
+[ext_resource type="PackedScene" uid="uid://csqwdeqjbruua" path="res://hud/shop/coins/coins_panel.tscn" id="6_lecme"]
 [ext_resource type="Texture2D" uid="uid://mb1t52dro3r8" path="res://hud/shop_button.png" id="7_sv2fp"]
 
 [node name="Hud" type="Control"]
@@ -14,34 +14,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vvp1l")
-
-[node name="CoinPanel" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -136.0
-offset_right = -8.0
-offset_bottom = 64.0
-grow_horizontal = 0
-mouse_filter = 2
-texture = ExtResource("1_34m5u")
-
-[node name="CoinsLabel" type="Label" parent="CoinPanel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 20.0
-offset_bottom = -7.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.980392, 1, 1, 1)
-theme_override_font_sizes/font_size = 32
-text = "$32"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Shop" parent="." instance=ExtResource("5_01mhw")]
 unique_name_in_owner = true
@@ -55,5 +27,9 @@ offset_top = 305.0
 offset_right = -583.0
 offset_bottom = -7.0
 image = ExtResource("7_sv2fp")
+
+[node name="CoinsPanel" parent="." instance=ExtResource("6_lecme")]
+unique_name_in_owner = true
+layout_mode = 1
 
 [connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]

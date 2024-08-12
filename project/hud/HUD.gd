@@ -5,13 +5,12 @@ signal purchased
 var purchase: Resource
 var purchase_type: String
 
-var _coins: int = 35
 
 
 func _ready() -> void:
 	$Shop.purchased.connect(_on_purchased)
 	Jukebox.play()
-	_update_coins_label()
+	%CoinsPanel.update_coins_label()
 	
 
 # Signalling purchases up the chain
@@ -19,9 +18,9 @@ func _ready() -> void:
 func _on_purchased() -> void:
 	purchase = $Shop.get_purchase()
 	purchase_type = $Shop.get_purchase_type()
-	_subtract_coins(purchase.price)
-
-	emit_signal("purchased")
+	if %CoinsPanel.get_coins() - purchase.price >= 0:
+		%CoinsPanel.subtract_coins(purchase.price)
+		emit_signal("purchased")
 
 
 func _get_purchase() -> Resource:
@@ -41,20 +40,3 @@ func _on_shop_button_pressed() -> void:
 	else:
 		%Shop.show()
 		%Shop.set_shop_open(true)
-
-
-# Coin Panel management
-
-func _add_coins(number) -> void:
-	_coins += number
-	_update_coins_label()
-
-
-func _subtract_coins(number) -> void:
-	_coins -= number
-	_update_coins_label()
-
-
-func _update_coins_label() -> void:
-	_coins = clamp(_coins, 0, 99999)
-	%CoinsLabel.text = "$" + str(_coins)
