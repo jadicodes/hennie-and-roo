@@ -1,6 +1,6 @@
 extends Control
 
-var coins: int = 35
+var coins: int = 200
 
 
 func _ready():
