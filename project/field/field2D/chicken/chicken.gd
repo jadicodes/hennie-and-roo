@@ -17,7 +17,7 @@ enum states {MOVE_RIGHT, MOVE_LEFT, MOVE_UP, MOVE_DOWN, STOP}
 # Using properties from resource to set chicken properties
 
 func _ready() -> void:
-	_random_generation()
+	_move_down()
 	_set_chicken_properties()
 
 
@@ -53,10 +53,10 @@ func _physics_process(_delta) -> void:
 func _random_generation() -> void:
 	_direction = randi() % 8
 	clamp(_direction, 0, 5)
-	_random_direction()
+	_set_direction()
 
 
-func _random_direction() -> void:
+func _set_direction() -> void:
 	_current_state = _direction
 
 

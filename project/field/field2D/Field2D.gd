@@ -15,7 +15,7 @@ func make_new_chicken(type: Chicken) -> void:
 
 	_chicken.chicken_type = type
 	call_deferred("add_child", _chicken)
-	_chicken.global_position = Vector2(311, 186)
+	_chicken.global_position = %Coop.get_spawn_location()
 
 
 func make_new_decor(type: Decoration) -> void:

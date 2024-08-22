@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cvsf1pio7uwqf" path="res://field/fence.png" id="5_q40j8"]
 [ext_resource type="Texture2D" uid="uid://cit6sq8apasg0" path="res://field/tree.png" id="6_enrdf"]
 [ext_resource type="Script" path="res://field/Camera.gd" id="6_xhjx3"]
+[ext_resource type="PackedScene" uid="uid://debdohnawibxu" path="res://field/coop/coop.tscn" id="7_qcdw0"]
 [ext_resource type="PackedScene" uid="uid://bddc02kb2qhm0" path="res://pause_menu/pause_menu.tscn" id="9_c8em4"]
-[ext_resource type="Texture2D" uid="uid://dsjh2rvaajgq3" path="res://field/coop/coop_1.png" id="10_qsvof"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o71vi"]
 texture = ExtResource("5_jn3u8")
@@ -105,10 +105,9 @@ position = Vector2(0, 1)
 tile_map_data = PackedByteArray("AAAFAP3/AAAAAAAAAAAQAAUAAAAAAAAAAAATAAsAAAAAAAAAAAAOAAoAAAAAAAAAAAAQAAgAAAAAAAAAAAAFAAoAAAAAAAAAAAD+//z/AAAAAAAAAAD///3/AAAAAAAAAAAQAPz/AAAAAAAAAAARAP//AAAAAAAAAAAPAAAAAAAAAAAAAAASAAMAAAAAAAAAAAATAAYAAAAAAAAAAAARAAIAAAAAAAAAAAAIAAsAAAAAAAAAAAD+/wwAAAAAAAAAAAD6//7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_03x4m")
 
-[node name="Coop1" type="Sprite2D" parent="Field2D"]
-y_sort_enabled = true
-position = Vector2(201, 1)
-texture = ExtResource("10_qsvof")
+[node name="Coop" parent="Field2D" instance=ExtResource("7_qcdw0")]
+unique_name_in_owner = true
+position = Vector2(63, 0)
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(236, 138)

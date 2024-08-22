@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://debdohnawibxu"]
+
+[ext_resource type="Script" path="res://field/coop/coop.gd" id="1_lretf"]
+[ext_resource type="Texture2D" uid="uid://dsjh2rvaajgq3" path="res://field/coop/coop_1.png" id="2_04e84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks0h2"]
+size = Vector2(21.0313, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pglt8"]
+size = Vector2(22, 20)
+
+[node name="Coop" type="StaticBody2D"]
+script = ExtResource("1_lretf")
+
+[node name="Texture" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_04e84")
+
+[node name="CollisionLeft" type="CollisionShape2D" parent="."]
+position = Vector2(-21.6563, 16)
+shape = SubResource("RectangleShape2D_ks0h2")
+
+[node name="CollisionRight" type="CollisionShape2D" parent="."]
+position = Vector2(21.5156, 16)
+shape = SubResource("RectangleShape2D_ks0h2")
+
+[node name="CollisionTop" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_pglt8")
+
+[node name="SpawnMarker" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 15)
