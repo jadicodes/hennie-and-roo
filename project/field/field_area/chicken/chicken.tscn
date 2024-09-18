@@ -10,17 +10,18 @@ radius = 5.0
 height = 22.0
 
 [node name="Chicken" type="CharacterBody2D"]
+position = Vector2(0, -7)
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_e58ac")
 chicken_type = ExtResource("2_aaowg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
 texture = ExtResource("3_ahgkp")
+offset = Vector2(0, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12)
+position = Vector2(1, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cemia")
 
@@ -37,7 +38,7 @@ stream = ExtResource("3_gqomb")
 bus = &"Sound Effects"
 
 [node name="EggMarker" type="Marker2D" parent="."]
-position = Vector2(0, 17)
+position = Vector2(12, -3)
 
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
 [connection signal="timeout" from="EggLayTimer" to="." method="_on_egg_lay_timer_timeout"]
