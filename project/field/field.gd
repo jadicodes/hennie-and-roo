@@ -10,7 +10,7 @@ var _paused: bool = false
 
 func _ready() -> void:
 	%Hud.purchased.connect(_on_purchased)
-	$Field2D.egg_sold.connect(_add_egg_price)
+	%FieldArea.egg_sold.connect(_add_egg_price)
 
 
 func _input(_event) -> void:
@@ -32,14 +32,14 @@ func _on_purchased() -> void:
 	purchase_type = %Hud.get_purchase_type()
 
 	if purchase_type == "Chicken":
-		_chicken = $Field2D.make_new_chicken(purchase)
+		_chicken = $FieldArea.make_new_chicken(purchase)
 	
 	if purchase_type == "Decor":
-		$Field2D.make_new_decor(purchase)
+		$FieldArea.make_new_decor(purchase)
 
 
 # Send egg price to HUD so that coin amount can be updated
 
 func _add_egg_price() -> void:
-	var egg_price = $Field2D.get_egg_price()
+	var egg_price = $FieldArea.get_egg_price()
 	%Hud/%CoinsPanel.add_coins(egg_price)

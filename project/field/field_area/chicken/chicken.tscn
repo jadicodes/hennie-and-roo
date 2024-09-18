@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cyh3v82dyv54x"]
 
-[ext_resource type="Script" path="res://field/field2D/chicken/chicken.gd" id="1_e58ac"]
+[ext_resource type="Script" path="res://field/field_area/chicken/chicken.gd" id="1_e58ac"]
 [ext_resource type="Resource" uid="uid://dylq1l5xucw70" path="res://resources/chickens/chicken_resources/campine/campine.tres" id="2_aaowg"]
 [ext_resource type="Texture2D" uid="uid://b6jy3vafna83" path="res://resources/chickens/chicken_resources/speckled_sussex/speckled_sussex.png" id="3_ahgkp"]
-[ext_resource type="AudioStream" uid="uid://d4i1w30ywkf33" path="res://field/field2D/laid.wav" id="3_gqomb"]
+[ext_resource type="AudioStream" uid="uid://d4i1w30ywkf33" path="res://field/field_area/laid.wav" id="3_gqomb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cemia"]
 radius = 5.0

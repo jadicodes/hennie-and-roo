@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bp6umxlxi5kkc"]
 
-[ext_resource type="Script" path="res://field/field2D/decor/decor.gd" id="1_q5swi"]
+[ext_resource type="Script" path="res://field/field_area/decor/decor.gd" id="1_q5swi"]
 [ext_resource type="Resource" uid="uid://c8ok5rg6qnafk" path="res://resources/decorations/feed/feed.tres" id="2_5b0ba"]
 
 [node name="Decor" type="Node2D"]
