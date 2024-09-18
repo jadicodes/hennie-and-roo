@@ -5,9 +5,15 @@ var purchase_type: String
 
 var _chicken: Chicken2D
 var _paused: bool = false
+var _current_state: int
 
 @onready var _field_area = %FieldArea
 
+
+enum state {
+	INTRO,
+	GAME,
+}
 
 # Connect signals
 
@@ -26,6 +32,15 @@ func _input(_event) -> void:
 			Engine.time_scale = 0
 
 		_paused = !_paused
+
+
+func _change_state(new_state) -> void: 
+	_current_state = new_state
+	match _current_state:
+		state.INTRO:
+			pass
+		state.GAME:
+			pass
 
 
 # Get purchase data and send it to Field2D to make new chicken
