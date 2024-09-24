@@ -10,5 +10,5 @@ name = "Golden Comet"
 price = 15
 eggs_per_week = 1
 image = ExtResource("2_2cvws")
-egg_value = 1
+egg_value = 2
 egg_image = ExtResource("1_c0nfn")

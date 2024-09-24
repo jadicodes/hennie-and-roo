@@ -10,5 +10,5 @@ name = "Australorp"
 price = 50
 eggs_per_week = 3
 image = ExtResource("2_kjwp5")
-egg_value = 2
+egg_value = 7
 egg_image = ExtResource("1_v7vpp")

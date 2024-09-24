@@ -10,5 +10,5 @@ name = "Rhode Island Red"
 price = 150
 eggs_per_week = 4
 image = ExtResource("1_c1uhr")
-egg_value = 4
+egg_value = 6
 egg_image = ExtResource("1_m4v2t")

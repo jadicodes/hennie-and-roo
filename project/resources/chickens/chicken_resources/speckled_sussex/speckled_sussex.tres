@@ -10,5 +10,5 @@ name = "Speckled Sussex"
 price = 20
 eggs_per_week = 2
 image = ExtResource("2_pymie")
-egg_value = 3
+egg_value = 4
 egg_image = ExtResource("1_td2fe")

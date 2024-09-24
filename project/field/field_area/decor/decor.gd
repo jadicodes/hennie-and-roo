@@ -38,14 +38,12 @@ func _on_placement_detector_body_entered(body: Node2D) -> void:
 	if body != Chicken2D:
 		_overlapping_bodies.append(body)
 		_check_placeable()
-		print(_overlapping_bodies)
 
 
 func _on_placement_detector_body_exited(body: Node2D) -> void:
 	if body != Chicken2D:
 		_overlapping_bodies.erase(body)
 		_check_placeable()
-		print(_overlapping_bodies)
 
 
 func _check_placeable():

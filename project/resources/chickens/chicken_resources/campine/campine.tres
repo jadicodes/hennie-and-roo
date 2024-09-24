@@ -10,5 +10,5 @@ name = "Campine"
 price = 300
 eggs_per_week = 7
 image = ExtResource("1_vbs0o")
-egg_value = 8
+egg_value = 10
 egg_image = ExtResource("1_m3qec")
