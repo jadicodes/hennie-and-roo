@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://csqwdeqjbruua"]
 
-[ext_resource type="Texture2D" uid="uid://chtuuedfcxlv6" path="res://hud/shop/coins/coin_sign.png" id="1_g7b7t"]
-[ext_resource type="Script" path="res://hud/shop/coins/coins_panel.gd" id="1_morgs"]
+[ext_resource type="Texture2D" uid="uid://chtuuedfcxlv6" path="res://menus/hud/shop/coins/coin_sign.png" id="1_g7b7t"]
+[ext_resource type="Script" path="res://menus/hud/shop/coins/coins_panel.gd" id="1_morgs"]
 
 [node name="CoinsPanel" type="Control"]
 layout_mode = 3

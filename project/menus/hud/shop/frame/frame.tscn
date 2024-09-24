@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://f7kb8pxu0gtt"]
 
-[ext_resource type="Texture2D" uid="uid://bu23pu40px7hn" path="res://hud/shop/frame/object_shop_frame.png" id="1_w7vvm"]
-[ext_resource type="Texture2D" uid="uid://b2qtwuxy4tsi1" path="res://hud/shop/frame/object_shop_frame_pressed.png" id="2_suh2i"]
-[ext_resource type="Script" path="res://hud/shop/frame/frame.gd" id="3_nlt3h"]
-[ext_resource type="Texture2D" uid="uid://dro320tko4wsg" path="res://hud/shop/chicken_button.png" id="4_a4l87"]
-[ext_resource type="AudioStream" uid="uid://6byl33fs2fit" path="res://hud/shop/frame/frame_pressed.wav" id="5_yfnnc"]
+[ext_resource type="Texture2D" uid="uid://bu23pu40px7hn" path="res://menus/hud/shop/frame/object_shop_frame.png" id="1_w7vvm"]
+[ext_resource type="Texture2D" uid="uid://b2qtwuxy4tsi1" path="res://menus/hud/shop/frame/object_shop_frame_pressed.png" id="2_suh2i"]
+[ext_resource type="Script" path="res://menus/hud/shop/frame/frame.gd" id="3_nlt3h"]
+[ext_resource type="Texture2D" uid="uid://dro320tko4wsg" path="res://menus/hud/shop/chicken_button.png" id="4_a4l87"]
+[ext_resource type="AudioStream" uid="uid://6byl33fs2fit" path="res://menus/hud/shop/frame/frame_pressed.wav" id="5_yfnnc"]
 
 [node name="Frame" type="TextureButton"]
 anchors_preset = 15

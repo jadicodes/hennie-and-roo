@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chtuuedfcxlv6"
-path="res://.godot/imported/coin_sign.png-509ba5773fae3c0e31df7a161cb4b8f5.ctex"
+uid="uid://bt5cdol26a12j"
+path="res://.godot/imported/button_pressed.png-34cd20665f7961fa3a383379cc8d9832.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hud/shop/coins/coin_sign.png"
-dest_files=["res://.godot/imported/coin_sign.png-509ba5773fae3c0e31df7a161cb4b8f5.ctex"]
+source_file="res://menus/hud/button_pressed.png"
+dest_files=["res://.godot/imported/button_pressed.png-34cd20665f7961fa3a383379cc8d9832.ctex"]
 
 [params]
 

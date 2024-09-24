@@ -1,10 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp6umxlxi5kkc"]
+[gd_scene load_steps=6 format=3 uid="uid://bp6umxlxi5kkc"]
 
 [ext_resource type="Script" path="res://field/field_area/decor/decor.gd" id="1_q5swi"]
 [ext_resource type="Resource" uid="uid://c8ok5rg6qnafk" path="res://resources/decorations/feed/feed.tres" id="2_5b0ba"]
+[ext_resource type="Texture2D" uid="uid://dixhs2iic8tdm" path="res://resources/decorations/potted_plant/potted_plant.png" id="3_fh1ev"]
 
-[node name="Decor" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrfd1"]
+size = Vector2(12, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_weny2"]
+size = Vector2(32, 12)
+
+[node name="Decor" type="StaticBody2D"]
 script = ExtResource("1_q5swi")
 decor_type = ExtResource("2_5b0ba")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("3_fh1ev")
+offset = Vector2(0, -10)
+
+[node name="PlacementDetector" type="Area2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -10)
+
+[node name="AreaCollision" type="CollisionShape2D" parent="PlacementDetector"]
+position = Vector2(-8.74228e-08, 10)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_wrfd1")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_weny2")
+
+[connection signal="body_entered" from="PlacementDetector" to="." method="_on_placement_detector_body_entered"]
+[connection signal="body_exited" from="PlacementDetector" to="." method="_on_placement_detector_body_exited"]

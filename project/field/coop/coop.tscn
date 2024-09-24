@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dsjh2rvaajgq3" path="res://field/coop/coop_1.png" id="2_04e84"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks0h2"]
-size = Vector2(21.0313, 32)
+size = Vector2(21.0313, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pglt8"]
-size = Vector2(22, 20)
+size = Vector2(22, 37)
 
 [node name="Coop" type="StaticBody2D"]
 script = ExtResource("1_lretf")
@@ -27,15 +27,15 @@ grow_vertical = 2
 texture = ExtResource("2_04e84")
 
 [node name="CollisionLeft" type="CollisionShape2D" parent="."]
-position = Vector2(-21.6563, 16)
+position = Vector2(-21.6563, 0.5)
 shape = SubResource("RectangleShape2D_ks0h2")
 
 [node name="CollisionRight" type="CollisionShape2D" parent="."]
-position = Vector2(21.5156, 16)
+position = Vector2(22, 0)
 shape = SubResource("RectangleShape2D_ks0h2")
 
 [node name="CollisionTop" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -12.5)
 shape = SubResource("RectangleShape2D_pglt8")
 
 [node name="SpawnMarker" type="Marker2D" parent="."]

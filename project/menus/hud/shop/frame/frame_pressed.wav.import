@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://6byl33fs2fit"
-path="res://.godot/imported/frame_pressed.wav-582eefa683562d78abed1c1866cef2f0.sample"
+path="res://.godot/imported/frame_pressed.wav-80bbb09fae74b2f36fe9f374e4f4636b.sample"
 
 [deps]
 
-source_file="res://hud/shop/frame/frame_pressed.wav"
-dest_files=["res://.godot/imported/frame_pressed.wav-582eefa683562d78abed1c1866cef2f0.sample"]
+source_file="res://menus/hud/shop/frame/frame_pressed.wav"
+dest_files=["res://.godot/imported/frame_pressed.wav-80bbb09fae74b2f36fe9f374e4f4636b.sample"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbex2rq4ulmma"
-path="res://.godot/imported/shop_background_border.png-87b3132d4fc7c83088a85bf498334dd6.ctex"
+uid="uid://bmquvga4cvgdf"
+path="res://.godot/imported/button.png-50cebf86ac17388b0e7c9a7241d2d840.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hud/shop/shop_background_border.png"
-dest_files=["res://.godot/imported/shop_background_border.png-87b3132d4fc7c83088a85bf498334dd6.ctex"]
+source_file="res://menus/hud/button.png"
+dest_files=["res://.godot/imported/button.png-50cebf86ac17388b0e7c9a7241d2d840.ctex"]
 
 [params]
 

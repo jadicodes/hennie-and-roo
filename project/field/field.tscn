@@ -1,13 +1,13 @@
 [gd_scene load_steps=16 format=4 uid="uid://53235pf8rm81"]
 
 [ext_resource type="Script" path="res://field/field.gd" id="1_mwej4"]
-[ext_resource type="PackedScene" uid="uid://de4ucf6pwx7ws" path="res://hud/HUD.tscn" id="3_w4n28"]
+[ext_resource type="PackedScene" uid="uid://de4ucf6pwx7ws" path="res://menus/hud/HUD.tscn" id="3_w4n28"]
 [ext_resource type="Texture2D" uid="uid://bkumcensl4y2j" path="res://field/floor_tiles.png" id="5_jn3u8"]
 [ext_resource type="Texture2D" uid="uid://cvsf1pio7uwqf" path="res://field/fence.png" id="5_q40j8"]
 [ext_resource type="Texture2D" uid="uid://cit6sq8apasg0" path="res://field/tree.png" id="6_enrdf"]
 [ext_resource type="Script" path="res://field/Camera.gd" id="6_xhjx3"]
 [ext_resource type="PackedScene" uid="uid://debdohnawibxu" path="res://field/coop/coop.tscn" id="7_qcdw0"]
-[ext_resource type="PackedScene" uid="uid://bddc02kb2qhm0" path="res://pause_menu/pause_menu.tscn" id="9_c8em4"]
+[ext_resource type="PackedScene" uid="uid://bddc02kb2qhm0" path="res://menus/pause_menu/pause_menu.tscn" id="9_c8em4"]
 
 [sub_resource type="GDScript" id="GDScript_47l0v"]
 script/source = "extends Node2D

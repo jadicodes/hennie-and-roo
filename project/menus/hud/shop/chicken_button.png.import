@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu23pu40px7hn"
-path="res://.godot/imported/object_shop_frame.png-250a73d447d025d2ac840fde6d2a6777.ctex"
+uid="uid://dro320tko4wsg"
+path="res://.godot/imported/chicken_button.png-058c41619524f870e9939a8c3993a8bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hud/shop/frame/object_shop_frame.png"
-dest_files=["res://.godot/imported/object_shop_frame.png-250a73d447d025d2ac840fde6d2a6777.ctex"]
+source_file="res://menus/hud/shop/chicken_button.png"
+dest_files=["res://.godot/imported/chicken_button.png-058c41619524f870e9939a8c3993a8bc.ctex"]
 
 [params]
 

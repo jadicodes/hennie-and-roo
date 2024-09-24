@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh0g75sgv4ass"]
+
+[ext_resource type="Texture2D" uid="uid://hr1adrnlb8e2" path="res://menus/pause_menu/grabber.png" id="1_fy4y8"]
+[ext_resource type="Script" path="res://menus/pause_menu/volume_slider.gd" id="1_nehrd"]
+[ext_resource type="Texture2D" uid="uid://cij724g1snjxq" path="res://menus/pause_menu/grabber_highlight.png" id="2_adhbm"]
+
+[node name="VolumeSlider" type="HSlider"]
+offset_right = 15.0
+offset_bottom = 16.0
+theme_override_icons/grabber = ExtResource("1_fy4y8")
+theme_override_icons/grabber_highlight = ExtResource("2_adhbm")
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_nehrd")

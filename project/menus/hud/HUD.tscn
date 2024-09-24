@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://de4ucf6pwx7ws"]
 
-[ext_resource type="Script" path="res://hud/HUD.gd" id="1_vvp1l"]
-[ext_resource type="PackedScene" uid="uid://dg0am2b2u3lp8" path="res://hud/shop/shop.tscn" id="5_01mhw"]
-[ext_resource type="PackedScene" uid="uid://dbrv8vfp6581n" path="res://hud/image_button/image_button.tscn" id="6_4hn1r"]
-[ext_resource type="PackedScene" uid="uid://csqwdeqjbruua" path="res://hud/shop/coins/coins_panel.tscn" id="6_lecme"]
-[ext_resource type="Texture2D" uid="uid://mb1t52dro3r8" path="res://hud/shop_button.png" id="7_sv2fp"]
+[ext_resource type="Script" path="res://menus/hud/HUD.gd" id="1_vvp1l"]
+[ext_resource type="PackedScene" uid="uid://dg0am2b2u3lp8" path="res://menus/hud/shop/shop.tscn" id="5_01mhw"]
+[ext_resource type="PackedScene" uid="uid://dbrv8vfp6581n" path="res://menus/hud/image_button/image_button.tscn" id="6_4hn1r"]
+[ext_resource type="PackedScene" uid="uid://csqwdeqjbruua" path="res://menus/hud/shop/coins/coins_panel.tscn" id="6_lecme"]
+[ext_resource type="Texture2D" uid="uid://mb1t52dro3r8" path="res://menus/hud/shop_button.png" id="7_sv2fp"]
 
 [node name="Hud" type="Control"]
 layout_mode = 3

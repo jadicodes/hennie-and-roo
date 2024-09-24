@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bddc02kb2qhm0"]
 
-[ext_resource type="Script" path="res://pause_menu/volume_slider.gd" id="1_cy7rg"]
-[ext_resource type="Texture2D" uid="uid://hr1adrnlb8e2" path="res://pause_menu/grabber.png" id="1_vkn1w"]
-[ext_resource type="Texture2D" uid="uid://cij724g1snjxq" path="res://pause_menu/grabber_highlight.png" id="2_ej44x"]
+[ext_resource type="Script" path="res://menus/pause_menu/volume_slider.gd" id="1_cy7rg"]
+[ext_resource type="Texture2D" uid="uid://hr1adrnlb8e2" path="res://menus/pause_menu/grabber.png" id="1_vkn1w"]
+[ext_resource type="Texture2D" uid="uid://cij724g1snjxq" path="res://menus/pause_menu/grabber_highlight.png" id="2_ej44x"]
 [ext_resource type="AudioStream" uid="uid://b44rrtejun56f" path="res://jukebox/good_town.wav" id="2_sdx3q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aesro"]
