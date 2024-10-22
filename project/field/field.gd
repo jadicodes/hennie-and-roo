@@ -61,3 +61,13 @@ func _on_purchased() -> void:
 func _add_egg_price() -> void:
 	var egg_price = _field_area.get_egg_price()
 	%Hud/%CoinsPanel.add_coins(egg_price)
+
+
+# Hide and show HUD depending on decor purchase status
+
+func _on_field_area_hide_hud() -> void:
+	$HudLayer.hide()
+
+
+func _on_field_area_show_hud() -> void:
+	$HudLayer.show()

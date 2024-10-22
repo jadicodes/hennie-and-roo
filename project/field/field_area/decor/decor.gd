@@ -1,6 +1,9 @@
 class_name Decoration2D
 extends Node2D
 
+signal held
+signal placed
+
 @export var decor_type: Decoration
 
 var _overlapping_bodies: Array[Object] = []
@@ -12,6 +15,8 @@ var _placed = false
 func _ready() -> void:
 	_set_decor_properties()
 	global_position = get_global_mouse_position()
+	emit_signal("held")
+	
 
 
 func _physics_process(_delta) -> void:
@@ -19,11 +24,12 @@ func _physics_process(_delta) -> void:
 		global_position = get_global_mouse_position()
 
 
-func _input(_event):
+func _input(_event) -> void:
 	if not _placed and _placeable and Input.is_action_pressed("place"):
 		_placed = true
 		global_position = get_global_mouse_position()
 		set_physics_process(false)
+		emit_signal("placed")
 
 
 # Using properties from resource to set decor properties
@@ -46,7 +52,7 @@ func _on_placement_detector_body_exited(body: Node2D) -> void:
 		_check_placeable()
 
 
-func _check_placeable():
+func _check_placeable() -> void:
 	if _overlapping_bodies.size() > 1:
 		_placeable = false
 		modulate = Color.RED

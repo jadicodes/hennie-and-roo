@@ -12,9 +12,9 @@ func get_spawn_location() -> Vector2:
 
 # Add and remove chickens from the chickens_in_coop array
 
-func add_chicken(chicken):
+func add_chicken(chicken) -> void:
 	chickens_in_coop.append(chicken)
 
 
-func remove_chicken(chicken):
+func remove_chicken(chicken) -> void:
 	chickens_in_coop.erase(chicken)
